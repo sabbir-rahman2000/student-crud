@@ -1,0 +1,11 @@
+{
+  "name": "student-crud",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A dependency-free student CRUD application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
