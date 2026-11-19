@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student CRUD</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="container">
+      <h1>Student Management</h1>
+
+      <form id="student-form" novalidate>
+        <input type="hidden" id="student-id">
+        <label>Name <input id="name" name="name" required></label>
+        <label>Email <input id="email" name="email" type="email" required></label>
+        <label>Age <input id="age" name="age" type="number" min="1" max="150"></label>
+        <label>Course <input id="course" name="course"></label>
+        <div class="actions">
+          <button type="submit" id="submit-button">Add student</button>
+          <button type="button" id="cancel-button" hidden>Cancel</button>
+        </div>
+        <p id="form-error" role="alert"></p>
+      </form>
+
+      <section>
+        <label class="search">
+          Search
+          <input id="search" type="search" placeholder="Name, email, or course">
+        </label>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Name</th><th>Email</th><th>Age</th><th>Course</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="students"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
